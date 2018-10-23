@@ -1,0 +1,10 @@
+{
+    "presets": [
+        "@babel/env",
+        "minify"
+    ],
+    "plugins": [
+        ["transform-remove-console", { "exclude": [ "error", "warn"] }]
+    ],
+    "comments": false,
+}

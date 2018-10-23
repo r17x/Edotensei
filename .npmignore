@@ -1,0 +1,6 @@
+coverage
+fixtures
+src
+test
+.*
+*.log
