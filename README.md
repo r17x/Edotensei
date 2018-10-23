@@ -1,5 +1,6 @@
 # Edotensei
-Simple Load Assets/Resource.
+Simple Load Assets/Resource.   
+![madara](https://media.tenor.com/images/183c6d46ac5c2a9a90884b4a3713fa54/tenor.gif)
 
 ### Instalation
 ```
@@ -25,7 +26,7 @@ Edotensei.add(scriptList) // To Add Script Element in Body HTML
 Edotensei.remove(scriptList) // To Remove Script Element in Body HTML
 ```
 
-![madara](https://media.tenor.com/images/183c6d46ac5c2a9a90884b4a3713fa54/tenor.gif)
+
 
 
 ### Contribute 
