@@ -1,5 +1,5 @@
 {
-    "name": "Edotensei",
+    "name": "edotensei",
     "version": "1.0.0",
     "description": "Simple load Resource/Assets on the browser.",
     "main": "./dist/index.js",
