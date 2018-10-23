@@ -28,6 +28,11 @@ Edotensei.add(scriptList) // To Add Script Element in Body HTML
 Edotensei.remove(scriptList) // To Remove Script Element in Body HTML
 
 ```
+
+### Example in React 
+![use-in-react](https://github.com/ri7nz/Edotensei/blob/master/docs/use-in-react.png)
+![result-in-browser](https://github.com/ri7nz/Edotensei/blob/master/docs/result-react.png)
+
    
 ### Contribute 
 - Fork This [Edotensei](https://github.com/ri7nz/Edotensei)
