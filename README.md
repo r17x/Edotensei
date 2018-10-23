@@ -20,6 +20,9 @@ const scriptList = [
   },
   // add more here {}
 ];
+
+Edotensei.add(scriptList) // To Add Script Element in Body HTML 
+Edotensei.remove(scriptList) // To Remove Script Element in Body HTML
 ```
 
 ![madara](https://media.tenor.com/images/183c6d46ac5c2a9a90884b4a3713fa54/tenor.gif)
