@@ -1,5 +1,7 @@
 # Edotensei
-Simple Load Assets/Resource.
+Simple Load Assets/Resource.   
+   
+![madara](https://media.tenor.com/images/183c6d46ac5c2a9a90884b4a3713fa54/tenor.gif)
 
 ### Instalation
 ```
@@ -22,14 +24,13 @@ const scriptList = [
 ];
 
 Edotensei.add(scriptList) // To Add Script Element in Body HTML 
+
 Edotensei.remove(scriptList) // To Remove Script Element in Body HTML
+
 ```
-
-![madara](https://media.tenor.com/images/183c6d46ac5c2a9a90884b4a3713fa54/tenor.gif)
-
-
+   
 ### Contribute 
-- Fork This [annabelle](https://github.com/ri7nz/Edotensei)
+- Fork This [Edotensei](https://github.com/ri7nz/Edotensei)
 - Send Pull Request
 - Create An issue 
 - I am very open please give advice & feedback
