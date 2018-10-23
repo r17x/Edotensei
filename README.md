@@ -1,4 +1,8 @@
 # Edotensei
+
+[![Known Vulnerabilities](https://snyk.io/test/github/ri7nz/Edotensei/badge.svg)](https://snyk.io/test/github/ri7nz/Edotensei)
+[![NPM Version](https://badge.fury.io/js/edotensei.svg)](https://badge.fury.io/js/edotensei)
+
 Simple Load Assets/Resource.   
    
 ![madara](https://media.tenor.com/images/183c6d46ac5c2a9a90884b4a3713fa54/tenor.gif)
