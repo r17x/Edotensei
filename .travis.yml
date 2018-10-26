@@ -1,0 +1,18 @@
+language: node_js
+branches:
+  only:
+    - master
+node_js:
+  - '8','9','10'
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+script:
+  - echo 'Test & Build'
+install:
+  - yarn install
+script:
+  - yarn test
+  - yarn build
