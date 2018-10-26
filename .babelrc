@@ -7,4 +7,9 @@
         ["transform-remove-console", { "exclude": [ "error", "warn"] }]
     ],
     "comments": false,
+    "env": {
+        "test": {
+            "presets": ["@babel/env",]
+        }
+    }
 }

@@ -1,28 +1,32 @@
 {
-    "name": "edotensei",
-    "version": "1.0.0",
-    "description": "Simple load Resource/Assets on the browser.",
-    "main": "./dist/index.js",
-    "repository": "git@github.com:ri7nz/Edotensei.git",
-    "author": "ri7nz <ri7nz.labs@gmail.com>",
-    "license": "MIT",
-    "private": false,
-    "devDependencies": {
-        "@babel/cli": "^7.0.0",
-        "@babel/core": "^7.0.0",
-        "@babel/preset-env": "^7.0.0",
-        "babel-eslint": "^10.0.1",
-        "babel-preset-minify": "^0.5.0",
-        "eslint": "^5.7.0",
-        "eslint-config-google": "^0.11.0",
-        "jest": "^23.6.0"
-    },
-    "scripts": {
-        "build": "yarn clean && babel src --out-dir dist --ignore tests",
-        "lint": "eslint -c .eslintrc ./src --fix",
-        "clean": "rm -rf dist",
-        "prepublish": "yarn build",
-        "test": "jest",
-        "test-watch": "jest --watch"
-    }
+  "name": "edotensei",
+  "version": "1.0.0",
+  "description": "Simple load Resource/Assets on the browser.",
+  "main": "./dist/index.js",
+  "repository": "git@github.com:ri7nz/Edotensei.git",
+  "author": "ri7nz <ri7nz.labs@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-minify": "^0.5.0",
+    "eslint": "^5.7.0",
+    "eslint-config-google": "^0.11.0",
+    "jest": "^23.6.0",
+    "regenerator-runtime": "^0.12.1"
+  },
+  "scripts": {
+    "build": "yarn clean && babel src --out-dir dist --ignore tests",
+    "lint": "eslint -c .eslintrc ./src --fix",
+    "clean": "rm -rf dist",
+    "prepublish": "yarn build",
+    "test": "jest --config jest.config.js",
+    "test-watch": "jest --watch"
+  }
 }

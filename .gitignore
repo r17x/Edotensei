@@ -1,6 +1,5 @@
 *.log
 config.json
-
 dist
 node_modules
 Services
