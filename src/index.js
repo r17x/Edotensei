@@ -11,6 +11,10 @@
 
 const REL = ['dns-prefetch', 'prefetch', 'preconnect', 'preload']
 
+/* scriptElementList */
+const stateOfScriptElement = document
+  .getElementsByTagName('script')
+
 /**
  * Simple Injection HTML Script resource | Edotensei
  * Example use:
@@ -59,6 +63,10 @@ export default class Edotensei {
    * }
    */
   static append({id, src, async, defer, rel}) {
+    const {item} = stateOfScriptElement
+    for (let n = 0; n < stateOfScriptElement.length; n++) {
+      if (item(n) && item(n).src === src) return
+    }
     const element = document.createElement('script')
 
     Object.assign(element, {id, src, async, defer})
