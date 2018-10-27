@@ -11,8 +11,11 @@
 
 const REL = ['dns-prefetch', 'prefetch', 'preconnect', 'preload']
 
-/* scriptElementList */
-const stateOfScriptElement = document
+/*
+ * @const {HTMLCollection} stateOfScriptElement
+ * @url https://www.w3schools.com/jsref/dom_obj_htmlcollection.asp
+ */
+export const stateOfScriptElement = document
   .getElementsByTagName('script')
 
 /**
@@ -63,8 +66,8 @@ export default class Edotensei {
    * }
    */
   static append({id, src, async, defer, rel}) {
-    const {item} = stateOfScriptElement
-    for (let n = 0; n < stateOfScriptElement.length; n++) {
+    const {item, length} = stateOfScriptElement
+    for (let n = length; n < stateOfScriptElement.length; n--) {
       if (item(n) && item(n).src === src) return
     }
     const element = document.createElement('script')
@@ -72,8 +75,8 @@ export default class Edotensei {
     Object.assign(element, {id, src, async, defer})
 
     if (async && defer) {
-      element.async = undefined
-      element.defer = undefined
+      element.async = false
+      element.defer = false
     }
 
     if (rel && REL.includes(rel)) {
