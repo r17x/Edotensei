@@ -39,9 +39,11 @@ Edotensei.remove(scriptList) // To Remove Script Element in Body HTML
 ![use-in-react](https://github.com/ri7nz/Edotensei/blob/master/docs/use-in-react.png)
 ![result-in-browser](https://github.com/ri7nz/Edotensei/blob/master/docs/result-react.png)
 
+### Contributors
+- Everyone who posted an issue / pull request
    
-### Contribute 
-- Fork This [Edotensei](https://github.com/ri7nz/Edotensei)
-- Send Pull Request
-- Create An issue 
-- I am very open please give advice & feedback
+### Contribute & Help
+- Star & Fork [Edotensei](https://github.com/ri7nz/Edotensei)
+- Post any issues you find (please check existing issues before posting!)
+- Post new feature requests
+- Pull requests are welcome
