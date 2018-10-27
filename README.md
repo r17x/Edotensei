@@ -36,7 +36,9 @@ Edotensei.remove(scriptList) // To Remove Script Element in Body HTML
 ```
 
 ### Example in React 
-![use-in-react](https://github.com/ri7nz/Edotensei/blob/master/docs/use-in-react.png)
+- add & remove on react lifecycle
+![use-in-react](https://github.com/ri7nz/Edotensei/blob/master/docs/use-in-react.png)  
+- result in browser
 ![result-in-browser](https://github.com/ri7nz/Edotensei/blob/master/docs/result-react.png)
 
 ### Contributors
