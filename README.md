@@ -30,6 +30,7 @@ const scriptList = [
 
 Edotensei.add(scriptList) // To Add Script Element in Body HTML 
 
+# Make sure to pass same array of scriptList instance/reference
 Edotensei.remove(scriptList) // To Remove Script Element in Body HTML
 
 ```
