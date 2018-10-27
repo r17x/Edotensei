@@ -1,5 +1,9 @@
 import Edotensei, {stateOfScriptElement} from '../src'
 describe('Test Edotensei.add', () => {
+  /*
+   * @const {string} origin
+   * https://localhost
+   */
   const {origin} = document.location
 
   const scriptList = [
