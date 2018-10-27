@@ -6,7 +6,7 @@
  *   'preload', required as attributes
  *
  * @link https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types
- * @var {string[]}
+ * @const {array[string]} REL
  */
 const REL = ['dns-prefetch', 'prefetch', 'preconnect', 'preload']
 
@@ -14,7 +14,7 @@ const REL = ['dns-prefetch', 'prefetch', 'preconnect', 'preload']
  * @const {HTMLCollection} stateOfScriptElement
  * @url https://www.w3schools.com/jsref/dom_obj_htmlcollection.asp
  *
- * Todo This state of script element for check 
+ * Todo This state of script element for check
  * duplicate script element
  *
  */
@@ -48,8 +48,10 @@ export const stateOfScriptElement = document
 export default class Edotensei {
   /**
    * Inject all of scripts into document.
-   * Currently, it mutate and add `id` attribute into ScriptConfig within scriptList
-   * @param  {ScriptConfig[]} scriptList
+   * Currently, it mutate and add `id` attribute
+   * into ScriptConfig within scriptList
+   * @param  {array} scriptList
+   * @scriptList an array list for scriptConfig
    * @return {void}
    */
   static add(scriptList) {
@@ -61,7 +63,8 @@ export default class Edotensei {
 
   /**
    * Remove injected scripts from document.
-   * @param  {ScriptConfig[]} scriptList
+   * @param  {array} scriptList
+   * @scriptList an array list for scriptConfig
    * @return {void}
    */
   static remove(scriptList) {
@@ -73,7 +76,8 @@ export default class Edotensei {
 
   /**
    * Inject script into document.
-   * @param  {ScriptConfig} attributes
+   * @param  {object} scriptConfig
+   * @scriptConfig attributes
    * @return {void}
    */
   static append(scriptConfig) {
