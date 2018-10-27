@@ -2,6 +2,7 @@
 
 [![Known Vulnerabilities](https://snyk.io/test/github/ri7nz/Edotensei/badge.svg)](https://snyk.io/test/github/ri7nz/Edotensei)
 [![NPM Version](https://badge.fury.io/js/edotensei.svg)](https://badge.fury.io/js/edotensei)
+[![Build Status](https://travis-ci.com/ri7nz/Edotensei.svg?branch=master)](https://travis-ci.com/ri7nz/Edotensei)
 
 Simple Load Assets/Resource.   
    
@@ -29,6 +30,7 @@ const scriptList = [
 
 Edotensei.add(scriptList) // To Add Script Element in Body HTML 
 
+# Make sure to pass same array of scriptList instance/reference
 Edotensei.remove(scriptList) // To Remove Script Element in Body HTML
 
 ```
