@@ -1795,6 +1795,11 @@ eslint-config-google@^0.11.0:
   resolved "https://registry.yarnpkg.com/eslint-config-google/-/eslint-config-google-0.11.0.tgz#fd0fc70be2e9114df097cac93a9b5b0d4e1c6830"
   integrity sha512-z541Fs5TFaY7/35v/z100InQ2f3V2J7e3u/0yKrnImgsHjh6JWgSRngfC/mZepn/+XN16jUydt64k//kxXc1fw==
 
+eslint-plugin-jest@^21.26.2:
+  version "21.26.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-21.26.2.tgz#5b24413970e83e2c5b87c5c047a08a4881783605"
+  integrity sha512-SCTBC6q182D4qQlQAN81D351jdte/YwTMo4f+l19Gvh1VemaNZP7ak3MLLvw6xkL9dO2FxVjCLk5DCdl1KfdLw==
+
 eslint-scope@3.7.1:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-3.7.1.tgz#3d63c3edfda02e06e01a452ad88caacc7cdcb6e8"

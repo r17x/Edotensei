@@ -10,6 +10,17 @@
  */
 const REL = ['dns-prefetch', 'prefetch', 'preconnect', 'preload']
 
+/*
+ * @const {HTMLCollection} stateOfScriptElement
+ * @url https://www.w3schools.com/jsref/dom_obj_htmlcollection.asp
+ *
+ * Todo This state of script element for check 
+ * duplicate script element
+ *
+ */
+export const stateOfScriptElement = document
+  .getElementsByTagName('script')
+
 /**
  * @typedef  {Object}  ScriptConfig
  * @property {string?} id
@@ -72,8 +83,8 @@ export default class Edotensei {
     Object.assign(element, {id, src, async, defer})
 
     if (async && defer) {
-      element.async = undefined
-      element.defer = undefined
+      element.async = false
+      element.defer = false
     }
 
     if (rel && REL.includes(rel)) {
