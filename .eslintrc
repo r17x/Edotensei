@@ -2,6 +2,7 @@
     "extends": [
         "eslint:recommended",
         "google",
+        "plugin:jest/recommended"
     ],
     "parser": "babel-eslint",
     "parserOptions": {
