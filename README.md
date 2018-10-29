@@ -22,12 +22,19 @@ $ npm install edotensei --save-dev
 import Edotensei from 'edotensei'
 
 const scriptList = [
+  // Load javascript 
   {
     src: 'main.js', // URL
     async: boolean,
     defer: boolean,
     rel: 'preload|prefetch|dns-prefetch'
   },
+  
+  // load css
+  {
+    src: 'main.css', // load css
+    rel: 'preload|prefetch|dns-prefetch'
+  }
   // add more here {}
 ];
 
