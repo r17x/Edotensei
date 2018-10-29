@@ -10,30 +10,61 @@
  */
 const REL = ['dns-prefetch', 'prefetch', 'preconnect', 'preload']
 
+
+export const getType = (src) => {
+  /*
+   * @url https://regex101.com/r/iV3iM1/19
+   */
+  const regx = /\.(\w{2,3}($|\?))/m
+  const [, type] = regx.exec(src) || [, null]
+  return type
+}
+
+/**
+ * @param {object} attributes
+ * @param {string} type only "js" | "css" | "rel"
+ * @return {element} element
+ */
+export const makeElement = (attributes, type) => {
+  const element =
+        (['css', 'rel'].includes(type) && document.createElement('link'))
+    || (type === 'js' && document.createElement('script'))
+
+  Object.assign(element, attributes)
+  return element
+}
+
+export const makeAttribute = (attributes, type) => {
+  let {id, src, async, defer} = attributes
+
+  if (async && defer) {
+    async = false
+    defer = false
+  }
+
+  return (type === 'css' && {
+    id,
+    href: src,
+    rel: 'stylesheet',
+  }) || (type ==='js' && {
+    id,
+    src,
+    async,
+    defer,
+  }) || {}
+}
+
 /*
  * @const {HTMLCollection} stateOfScriptElement
  * @url https://www.w3schools.com/jsref/dom_obj_htmlcollection.asp
- *
- * Todo This state of script element for check 
- * duplicate script element
- *
  */
 export const stateOfScriptElement = document
   .getElementsByTagName('script')
 
 /**
- * @typedef  {Object}  ScriptConfig
- * @property {string?} id
- * @property {string}  url
- * @property {boolean} async
- * @property {boolean} defer
- * @property {string}  rel            Should be <HTML:Link_types>, reference https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types
- */
-
-/**
  * Edotensei, A simple HTML script resource injector
  * @example
- * const scriptList = [
+ * const elementList = [
  *   {
  *     src: 'url',
  *     async: boolean,
@@ -42,18 +73,27 @@ export const stateOfScriptElement = document
  *   }
  * ];
  *
- * Edotensei.addScript(scriptList)
- * Edotensei.removeScript(scriptList)
+ * Edotensei.addScript(elementList)
+ * Edotensei.removeScript(elementList)
+ *
+ * @typedef  {Object}  AttributeConfig
+ * @property {string?} id
+ * @property {string}  url
+ * @property {boolean} async
+ * @property {boolean} defer
+ * @property {string}  rel
+ * Should be <HTML:Link_types>, reference https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types
  */
 export default class Edotensei {
   /**
    * Inject all of scripts into document.
-   * Currently, it mutate and add `id` attribute into ScriptConfig within scriptList
-   * @param  {ScriptConfig[]} scriptList
+   * Currently, it mutate and add `id` attribute into
+   * AttributeConfig within elementList
+   * @param  {AttributeConfig[]} elementList
    * @return {void}
    */
-  static add(scriptList) {
-    scriptList.forEach((script, key) => {
+  static add(elementList) {
+    elementList.forEach((script, key) => {
       script.id = `script:${key}`
       Edotensei.append({...script})
     })
@@ -61,11 +101,11 @@ export default class Edotensei {
 
   /**
    * Remove injected scripts from document.
-   * @param  {ScriptConfig[]} scriptList
+   * @param  {AttributeConfig[]} elementList
    * @return {void}
    */
-  static remove(scriptList) {
-    scriptList.forEach((script, key) => {
+  static remove(elementList) {
+    elementList.forEach((script, key) => {
       script = document.getElementById(`script:${key}`)
       script.parentNode.removeChild(script)
     })
@@ -73,35 +113,35 @@ export default class Edotensei {
 
   /**
    * Inject script into document.
-   * @param  {ScriptConfig} attributes
+   * @param  {AttributeConfig} attributes
    * @return {void}
    */
-  static append(scriptConfig) {
-    const {id, src, async, defer, rel} = scriptConfig
-    const element = document.createElement('script')
+  static append(attributes) {
+    const {src, rel} = attributes
 
-    Object.assign(element, {id, src, async, defer})
+    const type = getType(src)
 
-    if (async && defer) {
-      element.async = false
-      element.defer = false
-    }
+    const element = makeElement(
+      makeAttribute(attributes, type),
+      type
+    )
 
     if (rel && REL.includes(rel)) {
-      const link = document.createElement('link')
       const attributes = {
         href: src,
         rel,
       }
 
-      if (rel.toLowerCase() === 'preload') {
-        Object.assign(attributes, {as: 'script'})
-      }
+      rel.toLowerCase() === 'preload' &&
+        Object.assign(attributes, {
+          as: (type==='js' && 'script')
+            || (type==='css' && 'style'),
+        })
 
-      Object.assign(link, attributes)
-      document.head.appendChild(link)
+      document.head.appendChild(makeElement(attributes, 'rel'))
     }
 
-    document.body.appendChild(element)
+    type === 'css' && document.head.appendChild(element)
+    type === 'js' && document.body.appendChild(element)
   }
 }
