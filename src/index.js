@@ -61,6 +61,11 @@ export const makeAttribute = (attributes, type) => {
 export const stateOfScriptElement = document
   .getElementsByTagName('script')
 
+export const stateOfLinkElement = document
+  .getElementsByTagName('link')
+
+export const duplicateScript = []
+
 /**
  * Edotensei, A simple HTML script resource injector
  * @example
@@ -87,16 +92,29 @@ export const stateOfScriptElement = document
 export default class Edotensei {
   /**
    * Inject all of scripts into document.
-   * Currently, it mutate and add `id` attribute into
-   * AttributeConfig within elementList
-   * @param  {AttributeConfig[]} elementList
+   * Currently, it mutate and add `id` attribute
+   * into ScriptConfig within scriptList
+   * @param  {ScriptConfig[]} scriptList
    * @return {void}
    */
-  static add(elementList) {
-    elementList.forEach((script, key) => {
-      script.id = `script:${key}`
-      Edotensei.append({...script})
-    })
+  static add(scriptList) {
+    const duplicates = []
+    scriptList.filter(
+      (value, index, me) => {
+        if (duplicates.includes(value.src)) {
+          duplicateScript.push(value.src)
+          return false
+        }
+        duplicates.push(value.src)
+        return me.indexOf(value) === index
+      }
+    )
+      .forEach(
+        (script, key) => {
+          script.id = `script:${key}`
+          Edotensei.append({...script})
+        }
+      )
   }
 
   /**
