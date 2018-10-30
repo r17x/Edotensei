@@ -1,6 +1,6 @@
 {
   "name": "edotensei",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple load Resource/Assets on the browser.",
   "main": "./dist/index.js",
   "repository": "git@github.com:ri7nz/Edotensei.git",
