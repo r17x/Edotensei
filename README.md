@@ -1,5 +1,6 @@
 # Edotensei
 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/ri7nz/Edotensei/pulls)
 [![Known Vulnerabilities](https://snyk.io/test/github/ri7nz/Edotensei/badge.svg)](https://snyk.io/test/github/ri7nz/Edotensei)
 [![NPM Version](https://badge.fury.io/js/edotensei.svg)](https://badge.fury.io/js/edotensei)
 [![Build Status](https://travis-ci.com/ri7nz/Edotensei.svg?branch=master)](https://travis-ci.com/ri7nz/Edotensei)
@@ -7,7 +8,7 @@
 [![Bundlephobia](https://badgen.net/bundlephobia/min/edotensei)](https://bundlephobia.com/result?p=edotensei@1.0.0)
 [![Bundlephobia](https://badgen.net/bundlephobia/minzip/edotensei)](https://bundlephobia.com/result?p=edotensei@1.0.0)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fri7nz%2FEdotensei.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fri7nz%2FEdotensei?ref=badge_shield)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/ri7nz/Edotensei/pulls)
+
 
 Simple Load Assets/Resource at browser on the fly.   
    
