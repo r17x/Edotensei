@@ -6,6 +6,7 @@
 [![Contributors](https://badgen.net/github/contributors/ri7nz/edotensei)](https://github.com/contributors/ri7nz/edotensei)
 [![Bundlephobia](https://badgen.net/bundlephobia/min/edotensei)](https://bundlephobia.com/result?p=edotensei@1.0.0)
 [![Bundlephobia](https://badgen.net/bundlephobia/minzip/edotensei)](https://bundlephobia.com/result?p=edotensei@1.0.0)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fri7nz%2FEdotensei.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fri7nz%2FEdotensei?ref=badge_shield)
 
 Simple Load Assets/Resource.   
    
@@ -59,3 +60,7 @@ Edotensei.remove(scriptList) // To Remove Script Element in Body HTML
 - Post any issues you find (please check existing issues before posting!)
 - Post new feature requests
 - Pull requests are welcome
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fri7nz%2FEdotensei.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fri7nz%2FEdotensei?ref=badge_large)
