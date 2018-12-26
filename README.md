@@ -7,8 +7,9 @@
 [![Bundlephobia](https://badgen.net/bundlephobia/min/edotensei)](https://bundlephobia.com/result?p=edotensei@1.0.0)
 [![Bundlephobia](https://badgen.net/bundlephobia/minzip/edotensei)](https://bundlephobia.com/result?p=edotensei@1.0.0)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fri7nz%2FEdotensei.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fri7nz%2FEdotensei?ref=badge_shield)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/ri7nz/Edotensei/pulls)
 
-Simple Load Assets/Resource.   
+Simple Load Assets/Resource at browser on the fly.   
    
 ![madara](https://media.tenor.com/images/183c6d46ac5c2a9a90884b4a3713fa54/tenor.gif)
 
