@@ -1,50 +1,46 @@
 {
-"presets": [
-    "@babel/env",
-  ],
-  "plugins": [
-  ],
+  "presets": ["@babel/env"],
+  "plugins": [],
   "comments": false,
   "env": {
-"development": {
-        "presets": [
-          [
-            "@babel/env",
-            {
-              "modules": "commonjs"
-            }
-          ]
-        ],
-        "plugins": [
-          "@babel/plugin-transform-classes"
+    "test": {
+      "presets": ["@babel/env"]
+    },
+    "development": {
+      "presets": [
+        [
+          "@babel/env",
+          {
+            "modules": "commonjs"
+          }
         ]
-      },
-      "es": {
-        "presets": [
-          [
-            "@babel/env",
-            {
-              "modules": false
-            }
-          ]
-        ],
-        "plugins": [
-          "@babel/plugin-transform-classes"
+      ],
+      "plugins": ["@babel/plugin-transform-classes"]
+    },
+    "es": {
+      "presets": [
+        [
+          "@babel/env",
+          {
+            "modules": false
+          }
         ]
-      },
-      "umd": {
-        "presets": [
-          [
-            "@babel/env",
-            {
-              "modules": false
-            }
-          ]
-        ],
-        "plugins": [
-          "@babel/plugin-transform-classes",
-          "@babel/plugin-external-helpers"
+      ],
+      "plugins": ["@babel/plugin-transform-classes"]
+    },
+    "umd": {
+      "presets": [
+        [
+          "@babel/env",
+          {
+            "modules": false
+          }
         ]
-      }
+      ],
+      "plugins": [
+        "@babel/plugin-transform-classes",
+        "@babel/plugin-external-helpers"
+      ]
+    }
   }
 }
