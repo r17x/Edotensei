@@ -12,6 +12,10 @@
   "author": "ri7nz <ri7nz.labs@gmail.com>",
   "license": "MIT",
   "private": false,
+  "files": [
+    "src",
+    "dist"
+  ],
   "bundlesize": [
     {
       "path": "./dist/*.js",
