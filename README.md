@@ -21,6 +21,7 @@ $ npm install edotensei --save-dev
 ```
 
 ### Usage
+- **NPM/Yarn**
 ```
 import Edotensei from 'edotensei'
 
@@ -48,10 +49,20 @@ Edotensei.remove(scriptList) // To Remove Script Element in Body HTML
 
 ```
 
-- **unpkg**
+- **HTML**
 ```
-https://unpkg.com/edotensei@1.0.2/dist/index.js
-// https://unpkg.com/edotensei@{version}/dist/index.js
+  <script src="https://unpkg.com/edotensei@latest/dist/edotensei.min.js"></script>
+  <script>
+    const scriptList = [
+      { src: "main.js", rel: "preload" },
+      { src: "main.css", rel: "preload" },
+      { src: "registerServiceWorker.js" },
+      { src: "https://fonts.gstatic.com/", rel: "dns-prefetch" },
+      { src: "https://fonts.googleapis.com/", rel: "dns-prefetch" }
+    ];
+
+    Edotensei.add(scriptList);
+  </script>
 ```
 
 ### Example in React 
