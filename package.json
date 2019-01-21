@@ -4,6 +4,7 @@
   "description": "Simple load Resource/Assets on the browser.",
   "main": "dist/edotensei.js",
   "module": "dist/edotensei.es.js",
+  "browser": "dist/edotensei.min.js",
   "files": [
     "src",
     "dist"
