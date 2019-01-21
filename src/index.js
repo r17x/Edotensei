@@ -9,8 +9,7 @@
  * @var {string[]}
  */
 const REL = ['dns-prefetch', 'prefetch', 'preconnect', 'preload']
-
-
+export const duplicateScript = []
 export const getType = (src) => {
   /*
    * @url https://regex101.com/r/iV3iM1/19
@@ -53,18 +52,6 @@ export const makeAttribute = (attributes, type) => {
     defer,
   }) || {}
 }
-
-/*
- * @const {HTMLCollection} stateOfScriptElement
- * @url https://www.w3schools.com/jsref/dom_obj_htmlcollection.asp
- */
-export const stateOfScriptElement = document
-  .getElementsByTagName('script')
-
-export const stateOfLinkElement = document
-  .getElementsByTagName('link')
-
-export const duplicateScript = []
 
 /**
  * Edotensei, A simple HTML script resource injector
@@ -163,3 +150,6 @@ export default class Edotensei {
     type === 'js' && document.body.appendChild(element)
   }
 }
+
+export const add = Edotensei.add
+export const remove = Edotensei.remove

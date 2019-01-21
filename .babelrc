@@ -1,15 +1,50 @@
 {
-  "presets": [
+"presets": [
     "@babel/env",
-    "minify"
   ],
   "plugins": [
-    ["transform-remove-console", { "exclude": [ "error", "warn"] }]
   ],
   "comments": false,
   "env": {
-    "test": {
-      "presets": ["@babel/env"]
-    }
+"development": {
+        "presets": [
+          [
+            "@babel/env",
+            {
+              "modules": "commonjs"
+            }
+          ]
+        ],
+        "plugins": [
+          "@babel/plugin-transform-classes"
+        ]
+      },
+      "es": {
+        "presets": [
+          [
+            "@babel/env",
+            {
+              "modules": false
+            }
+          ]
+        ],
+        "plugins": [
+          "@babel/plugin-transform-classes"
+        ]
+      },
+      "umd": {
+        "presets": [
+          [
+            "@babel/env",
+            {
+              "modules": false
+            }
+          ]
+        ],
+        "plugins": [
+          "@babel/plugin-transform-classes",
+          "@babel/plugin-external-helpers"
+        ]
+      }
   }
 }

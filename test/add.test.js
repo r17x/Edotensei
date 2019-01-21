@@ -1,8 +1,10 @@
 import Edotensei, {
-  stateOfScriptElement,
-  stateOfLinkElement,
   duplicateScript,
 } from '../src'
+import {
+  stateOfScriptElement,
+  stateOfLinkElement,
+} from '../src/utils'
 describe('Test Edotensei.add', () => {
   /*
    * @const {string} origin
