@@ -25,11 +25,12 @@ export const getType = (src) => {
  * @return {element} element
  */
 export const makeElement = (attributes, type) => {
-  const element =
-        (['css', 'rel'].includes(type) && document.createElement('link'))
-    || (type === 'js' && document.createElement('script'))
-
-  Object.assign(element, attributes)
+  const element = (['css', 'rel'].includes(type) && document.createElement('link')) ||
+                    (type === 'js' && document.createElement('script'))
+  Object.assign(
+    element,
+    attributes
+  )
   return element
 }
 
@@ -61,7 +62,10 @@ export const makeAttribute = (attributes, type) => {
  *     src: 'url',
  *     async: boolean,
  *     defer: boolean,
- *     rel: 'preload|prefetch'
+ *     // rel attributes
+ *     rel: 'preload|prefetch|dns-prefetch'
+ *     // onload as callback after injected in dom
+ *     onLoad: function,
  *   }
  * ];
  *
@@ -99,7 +103,7 @@ export default class Edotensei {
       .forEach(
         (script, key) => {
           script.id = `script:${key}`
-          Edotensei.append({...script})
+          Edotensei.append(script)
         }
       )
   }
@@ -111,8 +115,17 @@ export default class Edotensei {
    */
   static remove(elementList) {
     elementList.forEach((script, key) => {
-      script = document.getElementById(`script:${key}`)
-      script.parentNode.removeChild(script)
+      const toRemove = document
+        .getElementById(`script:${key}`)
+
+      toRemove
+        .parentNode
+        .removeChild(toRemove)
+
+      if (script.rel) {
+        const relToRemove = document.getElementById(`script:${key}:rel`)
+        relToRemove.parentNode.removeChild(relToRemove)
+      }
     })
   }
 
@@ -122,7 +135,7 @@ export default class Edotensei {
    * @return {void}
    */
   static append(attributes) {
-    const {src, rel} = attributes
+    const {id, src, rel, onLoad} = attributes
 
     const type = getType(src)
 
@@ -131,20 +144,32 @@ export default class Edotensei {
       type
     )
 
+    // if attributes rel has set
     if (rel && REL.includes(rel)) {
       const attributes = {
         href: src,
         rel,
+        id: `${id}:rel`,
       }
 
+      // Just Preload Rel have as attributes
       rel.toLowerCase() === 'preload' &&
-        Object.assign(attributes, {
-          as: (type==='js' && 'script')
-            || (type==='css' && 'style'),
-        })
-
-      document.head.appendChild(makeElement(attributes, 'rel'))
+            Object.assign(attributes, {
+              as: (type==='js' && 'script') ||
+                (type==='css' && 'style'),
+            })
+      document
+        .head
+        .appendChild(
+          makeElement(
+            attributes,
+            'rel')
+        )
     }
+
+    onLoad &&
+        typeof onload === 'function' &&
+            Object.assign(element, {onload: onLoad})
 
     type === 'css' && document.head.appendChild(element)
     type === 'js' && document.body.appendChild(element)
