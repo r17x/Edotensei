@@ -14,13 +14,13 @@ Simple Load HTML (Assets/Resources) on the fly (Browser).
    
 ![madara](https://media.tenor.com/images/183c6d46ac5c2a9a90884b4a3713fa54/tenor.gif)
 
-### Instalation
+## Instalation
 ```
 $ yarn add edotensei --dev
 $ npm install edotensei --save-dev
 ```
 
-### Usage
+## Usage
 - **NPM/Yarn**
 ```
 import Edotensei from 'edotensei'
@@ -65,21 +65,21 @@ Edotensei.remove(scriptList) // To Remove Script Element in Body HTML
   </script>
 ```
 
-### Example in React 
+## Example in React 
 - add & remove on react lifecycle
 ![use-in-react](https://github.com/ri7nz/Edotensei/blob/master/docs/use-in-react.png)  
 - result in browser  
 ![result-in-browser](https://github.com/ri7nz/Edotensei/blob/master/docs/result-react.png)
 
-### Contributors
-- Everyone who posted an issue / pull request
    
-### Contribute & Help
+## Contribute & Help
 - Star & Fork [Edotensei](https://github.com/ri7nz/Edotensei)
 - Post any issues you find (please check existing issues before posting!)
 - Post new feature requests
 - Pull requests are welcome
 
+### Contributors
+- Everyone who posted an issue / pull request
 
 ## License
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fri7nz%2FEdotensei.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fri7nz%2FEdotensei?ref=badge_large)
