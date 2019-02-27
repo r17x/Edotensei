@@ -1,6 +1,6 @@
 {
   "name": "edotensei",
-  "version": "1.0.3next",
+  "version": "1.0.3",
   "description": "Simple load Resource or Assets on the Browser.",
   "main": "dist/edotensei.js",
   "umd:main": "dist/edotensei.umd.js",
