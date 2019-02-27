@@ -15,6 +15,19 @@
   "author": "ri7nz <ri7nz.labs@gmail.com>",
   "license": "MIT",
   "private": false,
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": true
+          }
+        }
+      ]
+    ],
+    "plugins": []
+  },
   "bundlesize": [
     {
       "path": "./dist/*.js",
@@ -22,9 +35,9 @@
     }
   ],
   "devDependencies": {
-    "@babel/preset-env": "^7.1.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
     "bundlesize": "^0.17.0",
     "cross-env": "^5.2.0",
     "documentation": "^9.2.0",
@@ -43,7 +56,7 @@
     "build:main": "microbundle",
     "docs": "documentation readme src/*.js -q --section API && yarn fixreadme",
     "lint": "eslint -c .eslintrc ./src --fix",
-    "prepare": "rm -rf dist && yarn build",
+    "prepare": "rm -rf dist && yarn build && yarn test",
     "test": "jest --config jest.config.js",
     "test:watch": "jest --watch",
     "test:size": "bundlesize",
