@@ -171,8 +171,7 @@ export default class Edotensei {
         typeof onload === 'function' &&
             Object.assign(element, {onload: onLoad})
 
-    type === 'css' && document.head.appendChild(element)
-    type === 'js' && document.body.appendChild(element)
+    document[type === 'css' ? 'head' : 'body'].appendChild(element)
   }
 }
 
