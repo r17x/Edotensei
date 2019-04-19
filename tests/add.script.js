@@ -1,47 +1,34 @@
 import Edotensei, {
   duplicateScript,
 } from '../src'
+
 import {
   stateOfScriptElement,
   stateOfLinkElement,
 } from '../src/utils'
-describe('Test Edotensei.add', () => {
-  /*
-   * @const {string} origin
-   * https://localhost
-   */
-  const {origin} = document.location
 
+/*
+ * @const {string} origin
+ * https://localhost
+ */
+const {origin} = document.location
+
+describe('Added only script <js> files with attributes async or defer', () => {
   const scriptList = [
     {src: 'main.js'},
     {src: 'main-defer.js', defer: true},
     {src: 'main-async.js', async: true},
     {src: 'no-async-defer.js', async: true, defer: true},
-    {
-      src: 'with-rel.js',
-      // bug on set rel attributes
-      // rel: 'preload'
-    },
     {src: 'duplicate.js'},
     {src: 'duplicate.js'},
   ]
 
-  const scriptWithRel = [] // scriptList.filter( ({rel}) => rel )
-
   Edotensei.add(scriptList)
 
   for (const script of scriptList) {
-    const {src, async, defer, rel} = script
+    const {src, async, defer} = script
     const url = `${origin}/${src}`
-    let index = scriptList.indexOf(script)
-    /* Check rel attributes */
-    if (rel) {
-      index = scriptWithRel.indexOf(script)
-      test(`${src} have rel attribute`, () => {
-        expect(stateOfLinkElement.item(index).href)
-          .toEqual(url)
-      })
-    }
+    const index = scriptList.indexOf(script)
 
     /** check script in dom (body) **/
     if (! duplicateScript.includes(src)) {
