@@ -5759,10 +5759,10 @@ merge@^1.2.0:
   resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.1.tgz#38bebf80c3220a8a487b6fcfb3941bb11720c145"
   integrity sha512-VjFo4P5Whtj4vsLzsYBu5ayHhoHJ0UqNm7ibvShmbmoz7tGi0vXaoJbGdB+GmDMLUdg8DpQXEIeVDAe8MaABvQ==
 
-microbundle@0.10.1:
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/microbundle/-/microbundle-0.10.1.tgz#567d845e92fb24f14f20e79ca9909aabbbc5bb9b"
-  integrity sha512-QjGyyHWr1tfcO/B38WzlL4m9pCXzh2yTxIpwHUFUMRIpXtLIf3jzjGuGaK+YopatWC9xJfktb9neocWd63xhRQ==
+microbundle@0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/microbundle/-/microbundle-0.11.0.tgz#266bcf4210192698c23fe3bf3581ab81d31a14d0"
+  integrity sha512-Lt2f8OhC2y2uKyJ5zA8lEEiDsIAbk6yllBuoAWLIdYVIXYqOdN9mO3DI7VW7x/fw87gdnCLIJdVtpP6kaI99LA==
   dependencies:
     "@babel/core" "^7.2.2"
     "@babel/plugin-proposal-class-properties" "7.2.1"
