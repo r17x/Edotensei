@@ -42,7 +42,7 @@
     "cross-env": "5.2.0",
     "documentation": "10.0.0",
     "eslint": "5.16.0",
-    "eslint-config-google": "0.11.0",
+    "eslint-config-google": "0.12.0",
     "eslint-plugin-jest": "22.4.1",
     "gzip-size-cli": "3.0.0",
     "jest": "23.6.0",
