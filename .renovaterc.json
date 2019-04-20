@@ -1,6 +1,5 @@
 {
   "extends": [
-    "config:base",
-    ":pinOnlyDevDependencies"
+    "@ri7nz:js-lib",
   ]
 }
