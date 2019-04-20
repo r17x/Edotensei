@@ -5,8 +5,8 @@
 [![NPM Version](https://badge.fury.io/js/edotensei.svg)](https://badge.fury.io/js/edotensei)
 [![Build Status](https://travis-ci.com/ri7nz/Edotensei.svg?branch=master)](https://travis-ci.com/ri7nz/Edotensei)
 [![Contributors](https://badgen.net/github/contributors/ri7nz/edotensei)](https://github.com/contributors/ri7nz/edotensei)
-[![Bundlephobia](https://badgen.net/bundlephobia/min/edotensei)](https://bundlephobia.com/result?p=edotensei@1.0.0)
-[![Bundlephobia](https://badgen.net/bundlephobia/minzip/edotensei)](https://bundlephobia.com/result?p=edotensei@1.0.0)
+[![Bundlephobia](https://badgen.net/bundlephobia/min/edotensei)](https://bundlephobia.com/result?p=edotensei@latest)
+[![Bundlephobia](https://badgen.net/bundlephobia/minzip/edotensei)](https://bundlephobia.com/result?p=edotensei@latest)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fri7nz%2FEdotensei.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fri7nz%2FEdotensei?ref=badge_shield)
 
 
