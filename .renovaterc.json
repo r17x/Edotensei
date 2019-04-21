@@ -1,5 +1,5 @@
 {
   "extends": [
-    "@ri7nz:js-lib",
+    "@ri7nz:js-lib"
   ]
 }
