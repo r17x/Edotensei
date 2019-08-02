@@ -40,7 +40,7 @@
     "babel-preset-env": "1.7.0",
     "bundlesize": "0.17.2",
     "cross-env": "5.2.0",
-    "documentation": "11.0.1",
+    "documentation": "12.1.1",
     "eslint": "5.16.0",
     "eslint-config-google": "0.13.0",
     "eslint-plugin-jest": "22.14.0",
