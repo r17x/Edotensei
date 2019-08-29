@@ -43,7 +43,7 @@
     "documentation": "12.1.1",
     "eslint": "6.2.2",
     "eslint-config-google": "0.13.0",
-    "eslint-plugin-jest": "22.15.2",
+    "eslint-plugin-jest": "22.16.0",
     "gzip-size-cli": "3.0.0",
     "jest": "24.9.0",
     "microbundle": "0.11.0",
